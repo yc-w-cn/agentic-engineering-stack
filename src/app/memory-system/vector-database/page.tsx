@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -15,9 +17,15 @@ export default function VectorDatabasePage() {
           <h1 className="text-[32px] font-bold text-black dark:text:white mb-3">
             {detail.title}
           </h1>
-          <p className="text-[16px] leading-relaxed text-gray-600 dark:text-gray-400">
+          <p className="text-[16px] leading-relaxed text-gray-600 dark:text-gray-400 mb-4">
             {detail.description}
           </p>
+          <Link
+            href="/memory-system/vector-database/compare"
+            className="inline-block text-[14px] text-black dark:text:white border border-black dark:border:white px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+          >
+            查看详细对比 →
+          </Link>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
