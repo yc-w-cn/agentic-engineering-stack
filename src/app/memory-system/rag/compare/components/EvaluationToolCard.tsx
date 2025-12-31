@@ -1,17 +1,17 @@
-import { VectorDatabase } from '../data';
+import { EvaluationTool } from '../data';
 
-interface DatabaseCardProps {
-  database: VectorDatabase;
+interface EvaluationToolCardProps {
+  tool: EvaluationTool;
 }
 
-export default function DatabaseCard({ database }: DatabaseCardProps) {
+export default function EvaluationToolCard({ tool }: EvaluationToolCardProps) {
   return (
     <div className="border border-gray-200 dark:border-gray-800 p-5">
       <h3 className="text-[18px] font-semibold text-black dark:text:white mb-2">
-        {database.name}
+        {tool.name}
       </h3>
       <p className="text-[13px] leading-5 text-gray-600 dark:text-gray-400 mb-4">
-        {database.description}
+        {tool.description}
       </p>
 
       <div className="space-y-4">
@@ -20,7 +20,7 @@ export default function DatabaseCard({ database }: DatabaseCardProps) {
             核心特性
           </h4>
           <ul className="space-y-1">
-            {database.features.map((feature, index) => (
+            {tool.features.map((feature, index) => (
               <li
                 key={index}
                 className="text-[13px] leading-5 text-gray-700 dark:text-gray-300 flex items-start"
@@ -37,7 +37,7 @@ export default function DatabaseCard({ database }: DatabaseCardProps) {
             优势
           </h4>
           <ul className="space-y-1">
-            {database.pros.map((pro, index) => (
+            {tool.pros.map((pro, index) => (
               <li
                 key={index}
                 className="text-[13px] leading-5 text-gray-700 dark:text-gray-300 flex items-start"
@@ -54,7 +54,7 @@ export default function DatabaseCard({ database }: DatabaseCardProps) {
             劣势
           </h4>
           <ul className="space-y-1">
-            {database.cons.map((con, index) => (
+            {tool.cons.map((con, index) => (
               <li
                 key={index}
                 className="text-[13px] leading-5 text-gray-700 dark:text-gray-300 flex items-start"
@@ -71,7 +71,7 @@ export default function DatabaseCard({ database }: DatabaseCardProps) {
             适用场景
           </h4>
           <ul className="space-y-1">
-            {database.useCases.map((useCase, index) => (
+            {tool.useCases.map((useCase, index) => (
               <li
                 key={index}
                 className="text-[13px] leading-5 text-gray-700 dark:text-gray-300 flex items-start"
@@ -88,7 +88,7 @@ export default function DatabaseCard({ database }: DatabaseCardProps) {
             定价
           </h4>
           <p className="text-[13px] leading-5 text-gray-700 dark:text-gray-300">
-            {database.pricing}
+            {tool.pricing}
           </p>
         </div>
       </div>

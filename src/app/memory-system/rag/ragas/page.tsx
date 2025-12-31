@@ -1,21 +1,10 @@
-import Link from 'next/link';
-
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-import { ragDetail } from './data';
+import { ragasDetail } from './data';
 
-const evaluationTools = [
-  {
-    slug: 'compare',
-    title: '评估工具对比',
-    description:
-      'RAGAS、TruLens、DeepEval 和 RAGTriever 四大评估工具的详细对比',
-  },
-];
-
-export default function RAGPage() {
-  const detail = ragDetail;
+export default function RagasPage() {
+  const detail = ragasDetail;
 
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg:black">
@@ -31,7 +20,7 @@ export default function RAGPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {detail.sections.map((section, index) => (
             <div
               key={index}
@@ -54,28 +43,6 @@ export default function RAGPage() {
             </div>
           ))}
         </div>
-
-        <section className="border-t border-gray-200 dark:border-gray-800 pt-6">
-          <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">
-            评估工具
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {evaluationTools.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/memory-system/rag/${tool.slug}`}
-                className="border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-black dark:hover:border:white transition-colors"
-              >
-                <h3 className="text-[16px] font-semibold text-black dark:text:white mb-2">
-                  {tool.title}
-                </h3>
-                <p className="text-[13px] leading-5 text-gray-600 dark:text-gray-400">
-                  {tool.description}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
       </main>
 
       <Footer />
