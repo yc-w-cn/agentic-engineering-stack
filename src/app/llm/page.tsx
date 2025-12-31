@@ -30,7 +30,7 @@ export default function LLMPage() {
     <div className="min-h-screen flex flex-col bg-white dark:bg:black">
       <Navbar />
 
-      <main className="flex-1 max-w-7xl mx-auto px-8 py-8">
+      <main className="flex-1 w-full max-w-7xl mx-auto px-8 py-8">
         <header className="mb-8">
           <div className="text-[48px] font-bold text-gray-200 dark:text-gray-800 mb-3">
             01
