@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/nextjs-shadcn-template',
-  assetPrefix: '/nextjs-shadcn-template',
+  basePath: '/agentic-engineering-stack',
+  assetPrefix: '/agentic-engineering-stack',
 };
 
 export default nextConfig;
