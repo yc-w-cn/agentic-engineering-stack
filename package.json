@@ -3,6 +3,10 @@
   "description": "聚焦智能体（Agent）工程化开发的技术栈对比与选型平台",
   "version": "0.0.1",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yc-w-cn/agentic-engineering-stack.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
