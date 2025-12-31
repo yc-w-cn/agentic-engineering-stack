@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 
 import ComparisonTable from './components/ComparisonTable';
 import DatabaseCard from './components/DatabaseCard';
-import { vectorDatabases } from './data';
+import { allVectorDatabases, vectorDatabases } from './data';
 
 export default function VectorDatabaseComparePage() {
   return (
@@ -21,6 +21,24 @@ export default function VectorDatabaseComparePage() {
         </header>
 
         <ComparisonTable />
+
+        <section className="mb-8">
+          <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">
+            向量数据库列表
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {allVectorDatabases.map((name) => (
+              <div
+                key={name}
+                className="border border-gray-200 dark:border-gray-800 px-4 py-3 text-center hover:border-black dark:hover:border:white transition-colors"
+              >
+                <span className="text-[14px] text-black dark:text:white font-medium">
+                  {name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <section className="mb-8">
           <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">

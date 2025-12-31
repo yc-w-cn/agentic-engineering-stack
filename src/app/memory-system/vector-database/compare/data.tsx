@@ -110,6 +110,25 @@ export const vectorDatabases: VectorDatabase[] = [
   },
 ];
 
+export const allVectorDatabases = [
+  'Pinecone',
+  'Weaviate',
+  'Milvus',
+  'Deep Lake',
+  'Vespa',
+  'FAISS',
+  'Qdrant',
+  'Chroma',
+  'Elasticsearch',
+  'pgvector',
+  'Redis',
+  'LanceDB',
+  'Marqo',
+  'SingleStoreDB',
+  'Vald',
+  'DocArray',
+];
+
 export const comparisonTable = {
   headers: ['特性', 'Weaviate', 'Chroma', 'Pinecone'],
   rows: [
