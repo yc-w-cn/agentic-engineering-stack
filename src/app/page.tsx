@@ -5,8 +5,8 @@ import { stackItems } from '@/lib/stack/items';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
-      <main className="max-w-7xl mx-auto px-8 py-16">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-black">
+      <main className="flex-1 max-w-7xl mx-auto px-8 py-16">
         <header className="mb-24">
           <h1 className="text-[64px] font-bold leading-tight text-black dark:text-white mb-8">
             Agent 技术栈
@@ -35,9 +35,9 @@ export default function Home() {
             </Link>
           ))}
         </div>
-
-        <Footer />
       </main>
+
+      <Footer />
     </div>
   );
 }
