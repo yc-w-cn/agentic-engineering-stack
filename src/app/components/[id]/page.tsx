@@ -12,7 +12,7 @@ const componentDetails: Record<
     }[];
   }
 > = {
-  '01': {
+  llm: {
     title: '大语言模型',
     description: '作为 Agent 的核心大脑，提供理解、推理和生成能力',
     sections: [
@@ -54,7 +54,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '02': {
+  'prompt-engineering': {
     title: '提示工程',
     description: '精心设计的提示词引导模型产生期望的行为和输出',
     sections: [
@@ -96,7 +96,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '03': {
+  'tool-calling': {
     title: '工具调用',
     description: 'Agent 通过 API 调用外部工具，扩展能力边界',
     sections: [
@@ -138,7 +138,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '04': {
+  'memory-system': {
     title: '记忆系统',
     description: '短期和长期记忆帮助 Agent 维持上下文和经验',
     sections: [
@@ -180,7 +180,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '05': {
+  'planning-reasoning': {
     title: '规划与推理',
     description: '将复杂任务分解为可执行的子任务序列',
     sections: [
@@ -222,7 +222,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '06': {
+  multimodal: {
     title: '多模态能力',
     description: '处理文本、图像、音频等多种输入输出形式',
     sections: [
@@ -264,7 +264,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '07': {
+  autonomy: {
     title: '自主性',
     description: '独立决策和执行任务，无需人工持续干预',
     sections: [
@@ -306,7 +306,7 @@ const componentDetails: Record<
       },
     ],
   },
-  '08': {
+  collaboration: {
     title: '协作能力',
     description: '多个 Agent 之间协同工作，完成复杂目标',
     sections: [
@@ -350,16 +350,36 @@ const componentDetails: Record<
   },
 };
 
-export default function ComponentDetail({
+const slugToNumber: Record<string, string> = {
+  llm: '01',
+  'prompt-engineering': '02',
+  'tool-calling': '03',
+  'memory-system': '04',
+  'planning-reasoning': '05',
+  multimodal: '06',
+  autonomy: '07',
+  collaboration: '08',
+};
+
+export async function generateStaticParams() {
+  return Object.keys(componentDetails).map((id) => ({
+    id,
+  }));
+}
+
+export default async function ComponentDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const detail = componentDetails[params.id];
+  const { id } = await params;
+  const detail = componentDetails[id];
 
   if (!detail) {
     notFound();
   }
+
+  const displayNumber = slugToNumber[id] || id;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -374,7 +394,7 @@ export default function ComponentDetail({
 
         <header className="mb-16">
           <div className="text-[80px] font-bold text-gray-200 dark:text-gray-800 mb-6">
-            {params.id}
+            {displayNumber}
           </div>
           <h1 className="text-[56px] font-bold text-black dark:text-white mb-6">
             {detail.title}
