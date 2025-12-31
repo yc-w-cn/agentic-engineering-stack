@@ -77,7 +77,7 @@ export default function Home() {
           {components.map((component) => (
             <Link
               key={component.slug}
-              href={`/components/${component.slug}`}
+              href={`/${component.slug}`}
               className="border-l-4 border-black dark:border-white pl-8 py-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors block"
             >
               <div className="text-[48px] font-bold text-gray-300 dark:text-gray-700 mb-4">
