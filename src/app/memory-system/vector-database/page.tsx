@@ -10,7 +10,7 @@ export default function VectorDatabasePage() {
     <div className="min-h-screen flex flex-col bg-white dark:bg:black">
       <Navbar />
 
-      <main className="flex-1 max-w-7xl mx-auto px-8 py-8">
+      <main className="flex-1 w-full max-w-7xl mx-auto px-8 py-8">
         <header className="mb-8">
           <h1 className="text-[32px] font-bold text-black dark:text:white mb-3">
             {detail.title}
