@@ -6,17 +6,17 @@ import { memorySystemDetail } from './data';
 
 const subModules = [
   {
-    slug: 'rag',
+    slug: 'memory-system/rag',
     title: 'RAG 检索增强生成',
     description: '结合检索和生成，为 LLM 提供外部知识，提升回答准确性和时效性',
   },
   {
-    slug: 'vector-database',
+    slug: 'memory-system/vector-database',
     title: '向量数据库',
     description: '高效存储和检索高维向量，支持语义搜索和相似度匹配',
   },
   {
-    slug: 'knowledge-graph',
+    slug: 'memory-system/knowledge-graph',
     title: '知识图谱',
     description: '结构化存储实体和关系，支持复杂推理和知识发现',
   },
