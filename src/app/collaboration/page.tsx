@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import Footer from '@/components/Footer';
 import { componentDetails } from '@/lib/component-data';
 

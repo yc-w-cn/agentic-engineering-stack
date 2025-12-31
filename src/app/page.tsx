@@ -93,7 +93,7 @@ export default function Home() {
           ))}
         </div>
 
-        <Footer showVersion />
+        <Footer />
       </main>
     </div>
   );
