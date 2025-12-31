@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   const components = [
     {
@@ -56,7 +58,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {components.map((component) => (
-            <a
+            <Link
               key={component.number}
               href={`/components/${component.number}`}
               className="border-l-4 border-black dark:border-white pl-8 py-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors block"
@@ -70,7 +72,7 @@ export default function Home() {
               <p className="text-[16px] leading-7 text-gray-600 dark:text-gray-400">
                 {component.description}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
 
