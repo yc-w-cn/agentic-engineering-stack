@@ -76,6 +76,28 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+  --swiss-font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --swiss-text-xs: 12px;
+  --swiss-text-sm: 16px;
+  --swiss-text-base: 24px;
+  --swiss-text-lg: 32px;
+  --swiss-text-xl: 48px;
+  --swiss-text-2xl: 64px;
+  --swiss-space-1: 8px;
+  --swiss-space-2: 16px;
+  --swiss-space-3: 24px;
+  --swiss-space-4: 32px;
+  --swiss-space-5: 48px;
+  --swiss-space-6: 64px;
+  --swiss-color-primary: #000000;
+  --swiss-color-secondary: #333333;
+  --swiss-color-accent: #FF3B30;
+  --swiss-color-background: #FFFFFF;
+  --swiss-color-surface: #F5F5F5;
+  --swiss-line-height-tight: 1.5;
+  --swiss-line-height-normal: 1.75;
+  --swiss-line-height-loose: 2;
 }
 
 .dark {
@@ -110,6 +132,12 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  --swiss-color-primary: #FFFFFF;
+  --swiss-color-secondary: #CCCCCC;
+  --swiss-color-accent: #FF453A;
+  --swiss-color-background: #000000;
+  --swiss-color-surface: #1C1C1E;
 }
 
 @layer base {
