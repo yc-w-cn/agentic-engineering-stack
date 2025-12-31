@@ -5,15 +5,6 @@ import Navbar from '@/components/Navbar';
 
 import { ragDetail } from './data';
 
-const evaluationTools = [
-  {
-    slug: 'compare',
-    title: '评估工具对比',
-    description:
-      'RAGAS、TruLens、DeepEval 和 RAGTriever 四大评估工具的详细对比',
-  },
-];
-
 export default function RAGPage() {
   const detail = ragDetail;
 
@@ -57,23 +48,31 @@ export default function RAGPage() {
 
         <section className="border-t border-gray-200 dark:border-gray-800 pt-6">
           <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">
-            评估工具
+            相关模块
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {evaluationTools.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/memory-system/rag/${tool.slug}`}
-                className="border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-black dark:hover:border:white transition-colors"
-              >
-                <h3 className="text-[16px] font-semibold text-black dark:text:white mb-2">
-                  {tool.title}
-                </h3>
-                <p className="text-[13px] leading-5 text-gray-600 dark:text-gray-400">
-                  {tool.description}
-                </p>
-              </Link>
-            ))}
+            <Link
+              href="/memory-system/rag/research"
+              className="border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-black dark:hover:border:white transition-colors"
+            >
+              <h3 className="text-[16px] font-semibold text-black dark:text:white mb-2">
+                RAG 研究
+              </h3>
+              <p className="text-[13px] leading-5 text-gray-600 dark:text-gray-400">
+                探索各种 RAG 框架的研究成果和实现方案
+              </p>
+            </Link>
+            <Link
+              href="/memory-system/rag/evaluation"
+              className="border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-black dark:hover:border:white transition-colors"
+            >
+              <h3 className="text-[16px] font-semibold text-black dark:text:white mb-2">
+                评估工具
+              </h3>
+              <p className="text-[13px] leading-5 text-gray-600 dark:text-gray-400">
+                RAGAS、TruLens、DeepEval 等评估工具对比
+              </p>
+            </Link>
           </div>
         </section>
       </main>
