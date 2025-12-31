@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const memorySystemDetail: StackDetail = {
   title: '记忆系统',

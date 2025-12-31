@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const llmDetail: StackDetail = {
   title: '大语言模型',

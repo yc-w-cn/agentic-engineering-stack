@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const multimodalDetail: StackDetail = {
   title: '多模态能力',

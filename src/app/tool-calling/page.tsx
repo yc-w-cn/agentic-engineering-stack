@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackDetails } from '@/lib/stack-data';
+
+import { toolCallingDetail } from './data';
 
 export default function ToolCallingPage() {
-  const detail = stackDetails['tool-calling'];
+  const detail = toolCallingDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

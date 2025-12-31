@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackDetails } from '@/lib/stack-data';
+
+import { planningReasoningDetail } from './data';
 
 export default function PlanningReasoningPage() {
-  const detail = stackDetails['planning-reasoning'];
+  const detail = planningReasoningDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

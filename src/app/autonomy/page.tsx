@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackDetails } from '@/lib/stack-data';
+
+import { autonomyDetail } from './data';
 
 export default function AutonomyPage() {
-  const detail = stackDetails.autonomy;
+  const detail = autonomyDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

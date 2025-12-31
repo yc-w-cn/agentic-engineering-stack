@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const planningReasoningDetail: StackDetail = {
   title: '规划与推理',

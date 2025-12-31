@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const toolCallingDetail: StackDetail = {
   title: '工具调用',

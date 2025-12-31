@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackDetails } from '@/lib/stack-data';
+
+import { memorySystemDetail } from './data';
 
 export default function MemorySystemPage() {
-  const detail = stackDetails['memory-system'];
+  const detail = memorySystemDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

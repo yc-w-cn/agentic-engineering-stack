@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackDetails } from '@/lib/stack-data';
+
+import { promptEngineeringDetail } from './data';
 
 export default function PromptEngineeringPage() {
-  const detail = stackDetails['prompt-engineering'];
+  const detail = promptEngineeringDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

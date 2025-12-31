@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const autonomyDetail: StackDetail = {
   title: '自主性',

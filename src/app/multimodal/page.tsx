@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackDetails } from '@/lib/stack-data';
+
+import { multimodalDetail } from './data';
 
 export default function MultimodalPage() {
-  const detail = stackDetails.multimodal;
+  const detail = multimodalDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

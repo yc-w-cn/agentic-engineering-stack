@@ -1,4 +1,4 @@
-import { StackDetail } from './types';
+import { StackDetail } from '@/lib/stack/types';
 
 export const collaborationDetail: StackDetail = {
   title: '协作能力',

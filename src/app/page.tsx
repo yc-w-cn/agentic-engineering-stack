@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { stackItems } from '@/lib/stack-data';
+import { stackItems } from '@/lib/stack/items';
 
 export default function Home() {
   return (

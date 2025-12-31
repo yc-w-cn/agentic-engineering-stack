@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 import Footer from '@/components/Footer';
 
-import { llmDetail } from './data';
+import { knowledgeGraphDetail } from './data';
 
-export default function LLMPage() {
-  const detail = llmDetail;
+export default function KnowledgeGraphPage() {
+  const detail = knowledgeGraphDetail;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -20,7 +20,7 @@ export default function LLMPage() {
 
         <header className="mb-16">
           <div className="text-[80px] font-bold text-gray-200 dark:text-gray-800 mb-6">
-            01
+            11
           </div>
           <h1 className="text-[56px] font-bold text-black dark:text-white mb-6">
             {detail.title}
