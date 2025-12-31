@@ -56,9 +56,10 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {components.map((component) => (
-            <div
+            <a
               key={component.number}
-              className="border-l-4 border-black dark:border-white pl-8 py-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
+              href={`/components/${component.number}`}
+              className="border-l-4 border-black dark:border-white pl-8 py-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors block"
             >
               <div className="text-[48px] font-bold text-gray-300 dark:text-gray-700 mb-4">
                 {component.number}
@@ -66,10 +67,10 @@ export default function Home() {
               <h2 className="text-[32px] font-semibold text-black dark:text-white mb-4">
                 {component.title}
               </h2>
-              <p className="text-[16px] leading-[28px] text-gray-600 dark:text-gray-400">
+              <p className="text-[16px] leading-7 text-gray-600 dark:text-gray-400">
                 {component.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
 
