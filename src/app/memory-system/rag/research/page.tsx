@@ -3,6 +3,9 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
+import { knowledgeGraphData } from './components/graphData';
+import KnowledgeGraph from './components/KnowledgeGraph';
+
 const ragVariants = [
   {
     slug: 'lightrag',
@@ -82,6 +85,20 @@ export default function RAGResearchPage() {
             </Link>
           ))}
         </div>
+
+        <section className="mt-8">
+          <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">
+            研究相关性图谱
+          </h2>
+          <p className="text-[14px] text-gray-600 dark:text-gray-400 mb-4">
+            展示各种 RAG
+            框架之间的关联性和相似度，节点颜色代表不同类别，连线粗细表示关联强度
+          </p>
+          <KnowledgeGraph
+            nodes={knowledgeGraphData.nodes}
+            links={knowledgeGraphData.links}
+          />
+        </section>
       </main>
 
       <Footer />
