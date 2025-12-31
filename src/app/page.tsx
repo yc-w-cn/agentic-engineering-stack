@@ -12,10 +12,10 @@ export default function Home() {
       <main className="flex-1 max-w-7xl mx-auto px-8 py-16">
         <header className="mb-24">
           <h1 className="text-[64px] font-bold leading-tight text-black dark:text-white mb-8">
-            Agent 技术栈
+            智能体技术栈
           </h1>
           <p className="text-[24px] leading-relaxed text-gray-600 dark:text-gray-400 max-w-3xl">
-            探索智能 Agent 的核心组成部分，理解构建自主 AI 系统的关键技术
+            探索智能体的核心组成部分，理解构建自主 AI 系统的关键技术
           </p>
         </header>
 

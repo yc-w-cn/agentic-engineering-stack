@@ -29,7 +29,7 @@ export default function Navbar() {
             href="/"
             className="text-[20px] font-bold text-black dark:text:white hover:opacity-70 transition-opacity"
           >
-            Agent 技术栈
+            智能体技术栈
           </Link>
 
           <button
