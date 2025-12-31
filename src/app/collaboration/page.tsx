@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
-import { componentDetails } from '@/lib/component-data';
+import { stackDetails } from '@/lib/stack-data';
 
 export default function CollaborationPage() {
-  const detail = componentDetails.collaboration;
+  const detail = stackDetails.collaboration;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
