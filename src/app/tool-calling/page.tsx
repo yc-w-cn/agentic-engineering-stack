@@ -1,61 +1,96 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 import { toolCallingDetail } from './data';
+
+const relatedModules = [
+  {
+    slug: 'llm',
+    title: '大语言模型',
+    description: '作为 Agent 的核心大脑，提供理解、推理和生成能力',
+  },
+  {
+    slug: 'memory-system',
+    title: '记忆系统',
+    description: '短期和长期记忆帮助 Agent 维持上下文和经验',
+  },
+  {
+    slug: 'autonomy',
+    title: '自主性',
+    description: 'Agent 能够独立决策和执行任务，无需人工干预',
+  },
+];
 
 export default function ToolCallingPage() {
   const detail = toolCallingDetail;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
-      <main className="max-w-4xl mx-auto px-8 py-16">
-        <Link
-          href="/"
-          className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white mb-12 transition-colors"
-        >
-          <span className="mr-2">←</span>
-          返回首页
-        </Link>
+    <div className="min-h-screen flex flex-col bg-white dark:bg:black">
+      <Navbar />
 
-        <header className="mb-16">
-          <div className="text-[80px] font-bold text-gray-200 dark:text-gray-800 mb-6">
+      <main className="flex-1 max-w-7xl mx-auto px-8 py-8">
+        <header className="mb-8">
+          <div className="text-[48px] font-bold text-gray-200 dark:text-gray-800 mb-3">
             03
           </div>
-          <h1 className="text-[56px] font-bold text-black dark:text-white mb-6">
+          <h1 className="text-[32px] font-bold text-black dark:text:white mb-3">
             {detail.title}
           </h1>
-          <p className="text-[24px] leading-relaxed text-gray-600 dark:text-gray-400">
+          <p className="text-[16px] leading-relaxed text-gray-600 dark:text-gray-400">
             {detail.description}
           </p>
         </header>
 
-        <div className="space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
           {detail.sections.map((section, index) => (
-            <section
+            <div
               key={index}
-              className="border-t border-gray-200 dark:border-gray-800 pt-8"
+              className="border-l-2 border-black dark:border:white pl-5 py-4"
             >
-              <h2 className="text-[28px] font-semibold text-black dark:text-white mb-6">
+              <h2 className="text-[18px] font-semibold text-black dark:text:white mb-3">
                 {section.title}
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-2">
                 {section.content.map((item, itemIndex) => (
                   <li
                     key={itemIndex}
-                    className="text-[18px] leading-8 text-gray-700 dark:text-gray-300 pl-6 relative"
+                    className="text-[14px] leading-6 text-gray-700 dark:text-gray-300 pl-5 relative"
                   >
-                    <span className="absolute left-0 top-2 w-2 h-2 bg-black dark:bg-white rounded-full"></span>
+                    <span className="absolute left-0 top-2 w-1.5 h-1.5 bg-black dark:bg:white rounded-full"></span>
                     {item}
                   </li>
                 ))}
               </ul>
-            </section>
+            </div>
           ))}
         </div>
 
-        <Footer />
+        <section className="border-t border-gray-200 dark:border-gray-800 pt-6">
+          <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">
+            相关模块
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {relatedModules.map((module) => (
+              <Link
+                key={module.slug}
+                href={`/${module.slug}`}
+                className="border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-black dark:hover:border:white transition-colors"
+              >
+                <h3 className="text-[16px] font-semibold text-black dark:text:white mb-2">
+                  {module.title}
+                </h3>
+                <p className="text-[13px] leading-5 text-gray-600 dark:text-gray-400">
+                  {module.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

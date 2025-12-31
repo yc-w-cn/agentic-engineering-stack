@@ -1,11 +1,14 @@
 import Link from 'next/link';
 
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import { stackItems } from '@/lib/stack/items';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-black">
+      <Navbar />
+
       <main className="flex-1 max-w-7xl mx-auto px-8 py-16">
         <header className="mb-24">
           <h1 className="text-[64px] font-bold leading-tight text-black dark:text-white mb-8">
