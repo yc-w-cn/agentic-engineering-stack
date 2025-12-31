@@ -1,4 +1,4 @@
-import { GraphNode, GraphLink } from './KnowledgeGraph';
+import { GraphLink, GraphNode } from './KnowledgeGraph';
 
 export const knowledgeGraphData = {
   nodes: [
