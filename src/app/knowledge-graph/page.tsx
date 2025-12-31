@@ -11,17 +11,14 @@ export default function KnowledgeGraphPage() {
     <div className="min-h-screen bg-white dark:bg-black">
       <main className="max-w-4xl mx-auto px-8 py-16">
         <Link
-          href="/"
+          href="/memory-system"
           className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white mb-12 transition-colors"
         >
           <span className="mr-2">←</span>
-          返回首页
+          返回记忆系统
         </Link>
 
         <header className="mb-16">
-          <div className="text-[80px] font-bold text-gray-200 dark:text-gray-800 mb-6">
-            11
-          </div>
           <h1 className="text-[56px] font-bold text-black dark:text-white mb-6">
             {detail.title}
           </h1>

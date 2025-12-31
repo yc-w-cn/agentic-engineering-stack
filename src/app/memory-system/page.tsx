@@ -4,6 +4,24 @@ import Footer from '@/components/Footer';
 
 import { memorySystemDetail } from './data';
 
+const subModules = [
+  {
+    slug: 'rag',
+    title: 'RAG 检索增强生成',
+    description: '结合检索和生成，为 LLM 提供外部知识，提升回答准确性和时效性',
+  },
+  {
+    slug: 'vector-database',
+    title: '向量数据库',
+    description: '高效存储和检索高维向量，支持语义搜索和相似度匹配',
+  },
+  {
+    slug: 'knowledge-graph',
+    title: '知识图谱',
+    description: '结构化存储实体和关系，支持复杂推理和知识发现',
+  },
+];
+
 export default function MemorySystemPage() {
   const detail = memorySystemDetail;
 
@@ -53,6 +71,28 @@ export default function MemorySystemPage() {
             </section>
           ))}
         </div>
+
+        <section className="mt-16 border-t border-gray-200 dark:border-gray-800 pt-12">
+          <h2 className="text-[32px] font-semibold text-black dark:text-white mb-8">
+            相关模块
+          </h2>
+          <div className="space-y-6">
+            {subModules.map((module) => (
+              <Link
+                key={module.slug}
+                href={`/${module.slug}`}
+                className="block border-l-4 border-gray-300 dark:border-gray-700 pl-6 py-4 hover:border-black dark:hover:border-white transition-colors"
+              >
+                <h3 className="text-[24px] font-semibold text-black dark:text-white mb-2">
+                  {module.title}
+                </h3>
+                <p className="text-[16px] leading-7 text-gray-600 dark:text-gray-400">
+                  {module.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <Footer />
       </main>
