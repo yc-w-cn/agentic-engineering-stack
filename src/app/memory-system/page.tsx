@@ -17,6 +17,11 @@ const subModules = [
     description: '高效存储和检索高维向量，支持语义搜索和相似度匹配',
   },
   {
+    slug: 'memory-system/embedding-models',
+    title: 'Embedding 模型',
+    description: '将文本转换为向量表示，捕捉语义信息用于相似度计算',
+  },
+  {
     slug: 'memory-system/knowledge-graph',
     title: '知识图谱',
     description: '结构化存储实体和关系，支持复杂推理和知识发现',
@@ -71,7 +76,7 @@ export default function MemorySystemPage() {
           <h2 className="text-[20px] font-semibold text-black dark:text:white mb-4">
             相关模块
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {subModules.map((module) => (
               <Link
                 key={module.slug}
