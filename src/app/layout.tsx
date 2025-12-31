@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Agent 技术栈',
-  description: '探索 Agent 技术的核心组成部分',
+  title: '智能体技术栈',
+  description: '探索智能体技术的核心组成部分',
 };
 
 export default function RootLayout({
