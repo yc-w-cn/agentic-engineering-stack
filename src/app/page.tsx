@@ -16,20 +16,20 @@ export default function Home() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stackItems.map((item) => (
             <Link
               key={item.slug}
               href={`/${item.slug}`}
-              className="border-l-4 border-black dark:border-white pl-8 py-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors block"
+              className="border-l-2 border-black dark:border-white pl-6 py-5 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors block"
             >
-              <div className="text-[48px] font-bold text-gray-300 dark:text-gray-700 mb-4">
+              <div className="text-[32px] font-bold text-gray-300 dark:text-gray-700 mb-3">
                 {item.number}
               </div>
-              <h2 className="text-[32px] font-semibold text-black dark:text-white mb-4">
+              <h2 className="text-[20px] font-semibold text-black dark:text-white mb-3">
                 {item.title}
               </h2>
-              <p className="text-[16px] leading-7 text-gray-600 dark:text-gray-400">
+              <p className="text-[14px] leading-6 text-gray-600 dark:text-gray-400">
                 {item.description}
               </p>
             </Link>
