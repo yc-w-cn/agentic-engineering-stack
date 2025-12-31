@@ -1,3 +1,5 @@
+import { GraphNode, GraphLink } from './KnowledgeGraph';
+
 export const knowledgeGraphData = {
   nodes: [
     { id: 'lightrag', label: 'LightRAG', group: 1 },
@@ -9,7 +11,7 @@ export const knowledgeGraphData = {
     { id: 'graphrag', label: 'GraphRAG', group: 7 },
     { id: 'nano-graphrag', label: 'Nano-GraphRAG', group: 7 },
     { id: 'fast-graphrag', label: 'Fast-GraphRAG', group: 7 },
-  ],
+  ] as GraphNode[],
   links: [
     { source: 'lightrag', target: 'graphrag', value: 2 },
     { source: 'lightrag', target: 'nano-graphrag', value: 1 },
@@ -25,5 +27,5 @@ export const knowledgeGraphData = {
     { source: 'lightrag', target: 'corrective-rag', value: 1 },
     { source: 'graphrag', target: 'adaptive-rag', value: 1 },
     { source: 'self-rag', target: 'graphrag', value: 1 },
-  ],
+  ] as GraphLink[],
 };

@@ -4,13 +4,13 @@ import { useEffect, useRef } from 'react';
 
 import * as d3 from 'd3';
 
-interface GraphNode extends d3.SimulationNodeDatum {
+export interface GraphNode extends d3.SimulationNodeDatum {
   id: string;
   label: string;
   group: number;
 }
 
-interface GraphLink extends d3.SimulationLinkDatum<GraphNode> {
+export interface GraphLink extends d3.SimulationLinkDatum<GraphNode> {
   value: number;
 }
 
