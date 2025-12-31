@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import Footer from '@/components/Footer';
+
 const componentDetails: Record<
   string,
   {
@@ -428,11 +430,7 @@ export default async function ComponentDetail({
           ))}
         </div>
 
-        <footer className="mt-24 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-[16px] text-gray-500 dark:text-gray-500">
-            基于 Swiss 设计风格构建 · 专注于清晰与功能性
-          </p>
-        </footer>
+        <Footer />
       </main>
     </div>
   );
