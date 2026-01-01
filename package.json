@@ -1,7 +1,7 @@
 {
   "name": "@yc-w-cn/agentic-engineering-stack",
   "description": "聚焦智能体（Agent）工程化开发的技术栈对比与选型平台",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "license": "MIT",
   "repository": {
